@@ -1,8 +1,11 @@
 import pandas as pd
 import numpy as np
-import linearmodels as lm
+import src.linearmodels as lm
+from pathlib import Path
 
-df = pd.read_csv('mroz.csv')
+assets_path = str(Path(__file__).parent) + '/assets'
+
+df = pd.read_csv(f'{assets_path}/mroz.csv')
 
 model = lm.two_sls(data = df, exogenous=['exper','expersq','kidslt6','kidsge6'],y = 'lwage', endogenous=['educ'], instruments = ['motheduc','fatheduc','huseduc'], method = 'robust')
 

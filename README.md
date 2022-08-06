@@ -13,18 +13,11 @@ a comparison with others statistic programs.
 Remember: For now, the "main file" is the *linearmodels.py* file. 
 
 
-## Modules requires 
+## Testing
 
-In order to use this module you will need the following modules:
+To execute an example run, execute the `make test` command.
 
-- Pandas  (dataframe manipulation)
-- Numpy   (matrix operations)
-- Copy    (make some usefull replication of the dataframe)
-- Tabulate (Prints the final summary)
-- Scipy  (Computing p value) 
-
-
-
+If you want to do it interactively, either open vscode inside a devcontainer (using the configuration in the .devcontainer folder) or run `make shell` to open a shell where you run the scripts directly.
 
 
 ## Models
